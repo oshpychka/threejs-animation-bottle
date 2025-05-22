@@ -1,0 +1,272 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+body, html {
+    font-family: 'Poppins', serif;
+    background-color: #fef7eb;
+}
+
+main {
+    overflow-x: clip;
+    padding: 50px 200px;
+}
+
+.wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+.model-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.model-inner {
+    aspect-ratio: 1;
+    width: 840px;
+    height: 840px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bottle-3d {
+    aspect-ratio: 1;
+    width: 100%;
+    height: 100%;
+    translate: 0 0;
+    transform-origin: center;
+    position: relative;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#bottle {
+    transform: translateX(100vw);
+    opacity: 0;
+    will-change: transform, opacity;
+}
+
+#hero {
+    display: flex;
+    height: 45rem;
+}
+
+
+.hero__text-box {
+    color: #D45A00;
+    font-size: 3rem;
+    opacity: 0;
+}
+
+.hero__title {
+    font-weight: 500;
+}
+
+.hero__text {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.hero__text-span {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45rem;
+}
+
+.text-section__text-1,
+.text-section__text-2 {
+    position: absolute;
+    max-width: 90%;
+    font-size: 4rem;
+    color: #D45A00;
+    clip-path: inset(0 0 0 100%);
+}
+
+.loader {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    height: 35rem;
+    padding-top: 60px;
+}
+
+.loader__text {
+    max-width: 65%;
+    font-size: 3rem;
+    color: #D45A00;
+}
+
+.final {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 110rem;
+}
+
+.final img {
+    width: 150px;
+    height: 400px;
+}
+
+.final img:nth-child(6){
+    margin-left: 150px;
+}
+
+.final__text {
+    position: absolute;
+    top: 65%;
+    opacity: 0;
+    left: 0;
+    max-width: 100%;
+    font-size: 2rem;
+    color: #D45A00;
+}
+
+.final__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    outline: none;
+    padding: 15px 25px;
+    background: #D45A00FF;
+    border: 1px solid black;
+    border-radius: 40px;
+    color: white;
+    font-size: 1.125rem;
+    line-height: 1.4;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: background 0.3s;
+}
+
+.final__btn:hover {
+    background: #974c17;
+}
+
+.final__second-text {
+    opacity: 0;
+    transform: translateX(200px);
+    font-size: 2rem;
+    color: #D45A00;
+    max-width: 30%;
+}
+
+@media screen and (max-width: 1300px) {
+
+    .text-section__text-1,
+    .text-section__text-2 {
+        font-size: 3rem;
+    }
+
+    .loader__text {
+        max-width: 80%;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 50px;
+    }
+
+    .hero__text-box {
+        margin-left: 150px;
+    }
+
+    .text-section__text-1,
+    .text-section__text-2 {
+        max-width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero__text-box {
+        font-size: 2rem;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+    }
+
+    .text-section {
+        justify-content: flex-start;
+    }
+
+    .text-section__text-1,
+    .text-section__text-2 {
+        font-size: 1.5rem;
+        max-width: 90%;
+    }
+
+    .loader__text {
+        font-size: 1.5rem;
+    }
+
+    .final__text {
+        font-size: 1.5rem;
+    }
+
+    .final {
+        flex-direction: column;
+    }
+
+    .final__btn {
+        margin: 0 0 0 auto;
+        padding: 15px 20px;
+    }
+
+    .final__second-text {
+        margin-top: 30px;
+        text-align: end;
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .hero__text-box {
+        font-size: 1.5rem;
+    }
+
+    .hero__text {
+        font-size: 1rem;
+    }
+
+    .final__second-text {
+        font-size: 1.5rem;
+        max-width: 40%;
+    }
+}
